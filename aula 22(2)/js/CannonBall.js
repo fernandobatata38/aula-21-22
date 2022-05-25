@@ -34,4 +34,11 @@ class CannonBall
             y:velocity.y * (180/3.14)
         });
     }
+    pshiuiiiiiim (indice){
+        Matter.Body.setVelocity(this.body,{x:0,y:0});
+        setTimeout(()=>{
+          Matter.World.remove(world,this.body);
+          delete esferas[indice];
+        },1000);
+      }
 }

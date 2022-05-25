@@ -8,6 +8,7 @@ class Boat {
       this.image = loadImage("./assets/boat.png");
   
       World.add(world, this.body);
+
     }
   
   
@@ -21,5 +22,11 @@ class Boat {
       imageMode(CENTER);
       image(this.image, 0, this.boatPosition, this.width, this.height);
       pop();
+    }
+    pshiuiiiiiim (indice){
+      setTimeout(()=>{
+        Matter.World.remove(world,this.body);
+        delete barcos[indice];
+      },2000);
     }
   }
