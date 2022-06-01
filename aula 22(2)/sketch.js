@@ -106,10 +106,10 @@ function apareci(){
 }
 function piratas_do_caribe(index){
   for(var i=0;i<barcos.length; i++){
-    if (esferas[index]!==undefined&&barcos[i]==undefined){
+    if (esferas[index]!==undefined&&barcos[i]!==undefined){
       var colisao=Matter.SAT.collides(esferas[index].body,barcos[i].body);
       if(colisao.collided){
-        barcos[i].pishuiiiiiim(i);
+        barcos[i].pshiuiiiiiim(i);
         Matter.World.remove(world,esferas[index].body);
         delete esferas[index];
       }

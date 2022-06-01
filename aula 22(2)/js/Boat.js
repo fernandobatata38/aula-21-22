@@ -25,7 +25,7 @@ class Boat {
     }
     pshiuiiiiiim (indice){
       setTimeout(()=>{
-        Matter.World.remove(world,this.body);
+        Matter.World.remove(world,barcos[indice].body);
         delete barcos[indice];
       },2000);
     }
